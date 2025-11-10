@@ -136,7 +136,7 @@
         <h3 class="title is-4">Relative Cross-Modal Redirection</h3>
         <div class="content has-text-justified">
           <p>
-            We guide unsafe representations away from their original unsafe meaning and toward safe interpretations by comparing them relative to each other rather than against a fixed set of negatives. This ensures the model learns what to avoid while keeping its underlying semantic structure intact. It preserves meaningful associations instead of breaking them, improving both safety and generalization.
+            Safe-CLIP’s InfoNCE-style cross-modal loss treats many semantically valid safe alternatives as negatives, pushing them away when they appear in the same batch and distorting CLIP’s cross-modal geometry; this drives a large zero-shot accuracy drop. We fix the negative selection by using a single targeted hard negative—the unsafe counterpart—so the model moves unsafe inputs toward the intended safe target without repelling related safe concepts. This preserves generalization while still suppressing unsafe associations.
           </p>
         </div>
       </div>
@@ -147,7 +147,7 @@
         <h3 class="title is-4">Proximity-Based Alignment</h3>
         <div class="content has-text-justified">
           <p>
-            Instead of forcing every unsafe concept toward a single predefined safe target, we find the closest semantically compatible safe alternative in the embedding space. This minimizes distortion to the pretrained model and respects its learned geometry. The result is safer alignment with significantly less loss in performance and semantic richness.
+            Instead of forcing each unsafe input toward a fixed, sometimes poorly matched safe target, we retrieve its closest semantically compatible safe alternative in the pretrained space and align to that. This “minimal-intervention” step respects CLIP’s geometry, reducing representational shift and avoiding noisy supervision. The result is safer alignment with significantly less loss of overall generilization performance (i.e Zero-Shot).
           </p>
         </div>
       </div>
@@ -171,7 +171,7 @@
         <h2 class="title is-3" style="text-align: center;">NSFWCaps: Robust Safety Evaluation Set</h2>
         <div class="content has-text-justified">
           <p>
-            NSFWCaps is our curated benchmark designed to test safety alignment under realistic distribution shift. Each sample pairs closely matched safe and unsafe versions of the same concept, ensuring that differences are semantic and safety-relevant, not random. This allows us to evaluate whether a model truly redirects unsafe content toward safe alternatives rather than merely censoring or collapsing meaning. It provides a stronger and more reliable measure of real-world multimodal safety performance.
+            A new 1,000-quadruplet benchmark of tightly aligned safe/unsafe image–caption pairs built from NoCaps, designed to test safety under mild distribution shift. Compared to prior sets, NSFWCaps pairs are more semantically coupled (e.g., higher caption similarity), enabling sharper measurement of both redirection and generalization. We report strong gains on NSFWCaps alongside retained zero-shot utility.
           </p>
         </div>
         <div class="content has-text-centered" style="margin-top: 2em;">
