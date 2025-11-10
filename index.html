@@ -201,7 +201,7 @@
         <div class="content has-text-centered">
           <img src="./static/images/aaai_motivational_figure_v5_B.png"
                alt="SafeR-CLIP motivation and approach"
-               style="width: 100%; max-width: 100%;">
+               style="width: 120%; max-width: 120%; margin-left: -10%;">
           <p class="has-text-justified" style="margin-top: 1em;">
             <strong>Figure 1:</strong> An unsafe concept can have multiple semantically valid safe alternatives. In this example, the unsafe caption "A deadly looking gun on a table next to a child" could plausibly align with safe counterparts such as "A kid sitting at a table with some food" or "A child at a table sitting next to stacked items", which preserve the underlying semantics while removing unsafe elements. <strong>(Left)</strong> Safe-CLIP (Poppi et al. 2024a) enforces a rigid alignment between the unsafe input and a single predefined safe caption (e.g., "A delicious looking bunt cake on a table next to fruit"), while treating other valid alternatives as potential negatives. This leads to two major issues: (1) due to the noisy nature of existing datasets like ViSU (Poppi et al. 2024a), the selected unsafe–safe pair may be semantically misaligned, as shown; and (2) semantically closer safe alternatives are incorrectly penalized. <strong>(Right)</strong> Our method, SafeR-CLIP, addresses these limitations by aligning each unsafe input with its most semantically compatible safe counterpart while pushing it away from the unsafe embedding—ensuring better safety–generalization trade-off.
           </p>
