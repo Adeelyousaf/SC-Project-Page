@@ -97,7 +97,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" style="padding-top: 1em;">
   <div class="container is-max-desktop">
     <!-- Warning. -->
     <div class="columns is-centered has-text-centered">
@@ -187,7 +187,10 @@
         <h2 class="title is-3" style="text-align: center;">NSFWCaps: Robust Safety Evaluation Set</h2>
         <div class="content has-text-justified">
           <p>
-            A new 1,000-quadruplet benchmark of tightly aligned safe/unsafe image–caption pairs built from NoCaps, designed to test safety under mild distribution shift. Compared to prior sets, NSFWCaps pairs are more semantically coupled (e.g., higher caption similarity), enabling sharper measurement of both redirection and generalization. 
+            Prior benchmarks like ViSU often pair unsafe and safe samples that are not semantically related, leading to noisy evaluation (e.g., an unsafe gun caption paired with a random “cake on a table” caption), as shown in Figure-1. 
+          </p>
+          <p>  
+            NSFWCaps fixes this by generating unsafe variants that preserve the original meaning, only changing the safety-relevant elements. We then apply safety filtering and semantic similarity scoring to ensure each safe–unsafe pair truly describes the same underlying scene.The final dataset contains 1,000 tightly aligned safe–unsafe quadruples, providing a much more reliable benchmark for evaluating cross-modal safety alignment.
           </p>
         </div>
         <div class="content has-text-centered" style="margin-top: 2em;">
