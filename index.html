@@ -99,24 +99,8 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-          Improving the safety of vision-language models like CLIP via fine-tuning often comes at a steep price, causing significant drops in their generalization performance. We find this trade-off stems from rigid alignment strategies that force unsafe concepts toward single, predefined safe targets, disrupting the model's learned semantic structure.
-          </p>
-          <p>
-          To address this, we propose a proximity-aware approach: redirecting unsafe concepts to their semantically closest safe alternatives to minimize representational change. We introduce SafeR-CLIP, a fine-tuning framework that applies this principle of minimal intervention. SafeR-CLIP successfully reconciles safety and performance, recovering up to 8.0% in zero-shot accuracy over prior methods while maintaining robust safety. To support more rigorous evaluation, we also contribute NSFWCaps, a new benchmark of 1,000 highly-aligned pairs for testing safety under distributional shift. Our work shows that respecting the geometry of pretrained representations is key to achieving safety without sacrificing performance.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
     <!-- Warning. -->
-    <div class="columns is-centered has-text-centered" style="margin-top: 2em;">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <div class="content">
           <p style="color: red; font-weight: bold; font-size: 1.1em;">
@@ -126,6 +110,26 @@
       </div>
     </div>
     <!--/ Warning. -->
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 2em;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Improving the safety of vision-language models like CLIP via fine-tuning often comes at a steep price, causing significant drops in their generalization performance. We find this trade-off stems from rigid alignment strategies that force unsafe concepts toward single, predefined safe targets, disrupting the model's learned semantic structure.
+          </p>
+          <p>
+          To address this, we propose a proximity-aware approach: redirecting unsafe concepts to their semantically closest safe alternatives to minimize representational change. We introduce SafeR-CLIP, a fine-tuning framework that applies this principle of minimal intervention. SafeR-CLIP successfully reconciles safety and performance, recovering up to 8.0% in zero-shot accuracy over prior methods while maintaining robust safety.
+          </p>
+          <p>
+
+          To support more rigorous evaluation, we also contribute NSFWCaps, a new benchmark of 1,000 highly-aligned pairs for testing safety under distributional shift. Our work shows that respecting the geometry of pretrained representations is key to achieving safety without sacrificing performance.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
 
     <!-- Paper Details. -->
     <div class="columns is-centered has-text-centered">
