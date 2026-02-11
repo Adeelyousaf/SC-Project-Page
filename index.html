@@ -8,20 +8,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SafeR-CLIP: Mitigating NSFW Content in Vision-Language Models While Preserving Pre-Trained Knowledge</title>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
+
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -32,78 +41,85 @@
 </head>
 <body>
 
-<nav class="navbar"></nav>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+    </div>
+
+  </div>
+</nav>
+
+<!-- #Adeel Yousaf, Joseph Fioresi, James Beetham, Amrit Singh Bedi, Mubarak Shah -->
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-
-          <h1 class="title is-1 publication-title">
-            SafeR-CLIP: Mitigating NSFW Content in Vision-Language Models While Preserving Pre-Trained Knowledge<br>[AAAI-2026]
-          </h1>
-
+          <h1 class="title is-1 publication-title">SafeR-CLIP: Mitigating NSFW Content in Vision-Language Models While Preserving Pre-Trained Knowledge<br>[AAAI-2026]</h1>
           <div class="is-size-5 publication-authors">
-            Adeel Yousaf<sup>1</sup>,
-            Joseph Fioresi<sup>1</sup>,
-            James Beetham<sup>1</sup>,
-            Amrit Singh Bedi<sup>2</sup>,
-            Mubarak Shah<sup>1</sup>
+            <span class="author-block">
+              <a href="https://www.crcv.ucf.edu/people/students/">Adeel Yousaf</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://joefioresi718.github.io/">Joseph Fioresi</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://james-beetham.github.io/">James Beetham</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/amritsinghbedi/home">Amrit Singh Bedi</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.crcv.ucf.edu/person/mubarak-shah/">Mubarak Shah</a><sup>1</sup>
+            </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <sup>1</sup>CRCV, University of Central Florida<br>
-            <sup>2</sup>SAFERR AI Lab, University of Central Florida
+            <span class="author-block"><sup>1</sup>Center for Research in Computer Vision (CRCV), University of Central Florida</span>
+            <br>
+            <span class="author-block"><sup>2</sup>SAFERR AI Lab, University of Central Florida</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-
+              <!-- ArXiv Link. -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2511.16743"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
                   <span>arXiv</span>
                 </a>
               </span>
 
+              <!-- Hugging Face Model Link -->
               <span class="link-block">
                 <a href="https://huggingface.co/Adeely93/SafeR_CLIP"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-robot"></i></span>
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-robot"></i>
+                  </span>
                   <span>HF Model</span>
                 </a>
               </span>
 
+              <!-- Hugging Face Dataset Link -->
               <span class="link-block">
                 <a href="https://huggingface.co/datasets/Adeely93/NSFWCaps"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-database"></i></span>
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
                   <span>HF Dataset</span>
                 </a>
               </span>
-
-              <!-- Poster -->
-              <span class="link-block">
-                <a href="./static/images/safeR_clip_poster_aaai.pdf"
-                   class="external-link button is-normal is-rounded is-dark"
-                   target="_blank">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Poster</span>
-                </a>
-              </span>
-
-              <!-- Presentation -->
-              <span class="link-block">
-                <a href="./static/images/safeRclip_PPT_v1.pdf"
-                   class="external-link button is-normal is-rounded is-dark"
-                   target="_blank">
-                  <span class="icon"><i class="fas fa-chalkboard"></i></span>
-                  <span>Presentation</span>
-                </a>
-              </span>
-
             </div>
           </div>
 
@@ -113,13 +129,9 @@
   </div>
 </section>
 
-
-<!-- 🔵 Your entire original content remains unchanged below -->
-
 <section class="section" style="padding-top: 1em;">
   <div class="container is-max-desktop">
-
-    <!-- Warning -->
+    <!-- Warning. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <div class="content">
@@ -129,50 +141,153 @@
         </div>
       </div>
     </div>
+    <!--/ Warning. -->
 
-    <!-- Abstract -->
+    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered" style="margin-top: 2em;">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>Improving the safety of vision-language models like CLIP via fine-tuning often comes at a steep price...</p>
-          <p>To address this, we propose a proximity-aware approach...</p>
-          <p>To support more rigorous evaluation, we also contribute NSFWCaps...</p>
+          <p>
+          Improving the safety of vision-language models like CLIP via fine-tuning often comes at a steep price, causing significant drops in their generalization performance. We find this trade-off stems from rigid alignment strategies that force unsafe concepts toward single, predefined safe targets, disrupting the model's learned semantic structure.
+          </p>
+          <p>
+          To address this, we propose a proximity-aware approach: redirecting unsafe concepts to their semantically closest safe alternatives to minimize representational change. We introduce SafeR-CLIP, a fine-tuning framework that applies this principle of minimal intervention. SafeR-CLIP successfully reconciles safety and performance, recovering up to 8.0% in zero-shot accuracy over prior methods while maintaining robust safety.
+          </p>
+          <p>
+
+          To support more rigorous evaluation, we also contribute NSFWCaps, a new benchmark of 1,000 highly-aligned pairs for testing safety under distributional shift. Our work shows that respecting the geometry of pretrained representations is key to achieving safety without sacrificing performance.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper Details. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Paper Details</h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/aaai_motivational_figure_v5_B.png"
+               alt="SafeR-CLIP motivation and approach"
+               style="width: 120%; max-width: 120%; margin-left: -10%;">
+          <p class="has-text-justified" style="margin-top: 1em;">
+            <strong>Figure 1:</strong> An unsafe concept can have multiple semantically valid safe alternatives. In this example, the unsafe caption "A deadly looking gun on a table next to a child" could plausibly align with safe counterparts such as "A kid sitting at a table with some food" or "A child at a table sitting next to stacked items", which preserve the underlying semantics while removing unsafe elements. <strong>(Left)</strong> Safe-CLIP (Poppi et al. 2024a) enforces a rigid alignment between the unsafe input and a single predefined safe caption (e.g., "A delicious looking bunt cake on a table next to fruit"), while treating other valid alternatives as potential negatives. This leads to two major issues: (1) due to the noisy nature of existing datasets like ViSU (Poppi et al. 2024a), the selected unsafe–safe pair may be semantically misaligned, as shown; and (2) semantically closer safe alternatives are incorrectly penalized. <strong>(Right)</strong> Our method, SafeR-CLIP, addresses these limitations by aligning each unsafe input with its most semantically compatible safe counterpart while pushing it away from the unsafe embedding—ensuring better safety–generalization trade-off.
+          </p>
         </div>
       </div>
     </div>
 
-    <!-- (ALL YOUR METHOD, DATASET, RESULTS, CONCLUSION SECTIONS REMAIN EXACTLY AS YOU HAD THEM) -->
+    <!-- Method Details. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Relative Cross-Modal Redirection</h3>
+        <div class="content has-text-justified">
+          <p>
+            Safe-CLIP’s InfoNCE-style cross-modal loss treats many semantically valid safe alternatives as negatives, pushing them away when they appear in the same batch and distorting CLIP’s cross-modal geometry; this drives a large zero-shot accuracy drop. We fix the negative selection by using a single targeted hard negative—the unsafe counterpart—so the model moves unsafe inputs toward the intended safe target without repelling related safe concepts. This preserves generalization while still suppressing unsafe associations.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Proximity-Based Alignment</h3>
+        <div class="content has-text-justified">
+          <p>
+            Instead of forcing each unsafe input toward a fixed, sometimes poorly matched safe target, we retrieve its closest semantically compatible safe alternative in the pretrained space and align to that. This “minimal-intervention” step respects CLIP’s geometry, reducing representational shift and avoiding noisy supervision. The result is safer alignment with significantly less loss of overall generilization performance (i.e Zero-Shot).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Progressive Training for Safety Alignment</h3>
+        <div class="content has-text-justified">
+          <p>
+            We introduce unsafe–safe pairs in a curriculum from easy to hard, stabilizing adaptation and preventing abrupt representational shifts. Early training focuses on clearly aligned pairs, while more challenging examples are added gradually. This controlled progression maintains model generalization while steadily increasing safety alignment strength.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Method Details. -->
+
+    <!-- Dataset. -->
+    <div class="columns is-centered" style="margin-top: 2em;">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="text-align: center;">NSFWCaps: Robust Safety Evaluation Set</h2>
+        <div class="content has-text-justified">
+          <p>
+            Prior benchmarks like ViSU often pair unsafe and safe samples that are not semantically related, leading to noisy evaluation (e.g., an unsafe gun caption paired with a random “cake on a table” caption), as shown in Figure-1. 
+          </p>
+          <p>  
+            NSFWCaps fixes this by generating unsafe variants that preserve the original meaning, only changing the safety-relevant elements. We then apply safety filtering and semantic similarity scoring to ensure each safe–unsafe pair truly describes the same underlying scene. The final dataset contains 1,000 tightly aligned safe–unsafe quadruples, providing a much more reliable benchmark for evaluating cross-modal safety alignment.
+          </p>
+        </div>
+        <div class="content has-text-centered" style="margin-top: 2em;">
+          <img src="./static/images/dataset.png"
+               alt="NSFWCaps dataset visualization"
+               style="width: 70%; max-width: 70%;">
+          <p class="has-text-justified" style="margin-top: 1em;">
+            <strong>Figure 2:</strong> Overview of the NSFWCaps dataset. Unsafe captions and images are minimally modified versions of their safe counterparts, preserving the original context while introducing NSFW elements. This ensures tight semantic alignment and enables controlled evaluation of cross-modal safety.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Dataset. -->
+
+    <!--/ Paper Details. -->
 
   </div>
 </section>
 
-
-<!-- Poster Section -->
 <section class="section">
   <div class="container is-max-desktop">
+
+    <!-- Results. -->
     <div class="columns is-centered">
-      <div class="column is-full-width has-text-centered">
-        <h2 class="title is-3">Poster & Presentation</h2>
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="text-align: center;">Results</h2>
 
-        <div style="margin-top: 1.5em;">
-          <a href="./static/images/safeR_clip_poster_aaai.pdf"
-             target="_blank"
-             class="button is-primary is-medium is-rounded"
-             style="margin-right: 1em;">
-            <span class="icon"><i class="fas fa-file-pdf"></i></span>
-            <span>Download Poster (PDF)</span>
-          </a>
+        <div class="content has-text-centered">
+          <img src="./static/images/result_1.png"
+               alt="Result 1"
+               style="width: 100%; max-width: 100%; margin-bottom: 2em;">
 
-          <a href="./static/images/safeRclip_PPT_v1.pdf"
-             target="_blank"
-             class="button is-link is-medium is-rounded">
-            <span class="icon"><i class="fas fa-chalkboard"></i></span>
-            <span>Download Presentation (PDF)</span>
-          </a>
+          <!-- Side by side tables -->
+          <div class="columns is-centered" style="margin-bottom: 2em;">
+            <div class="column is-half">
+              <img src="./static/images/result_3_diffusion.png"
+                   alt="Result 3"
+                   style="width: 100%; max-width: 100%;">
+            </div>
+            <div class="column is-half">
+              <img src="./static/images/result_4.png"
+                   alt="Result 4"
+                   style="width: 100%; max-width: 100%; margin-top: 2em;">
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <!--/ Results. -->
+
+    <!-- Conclusion. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="text-align: center;">Conclusion</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We present SafeR-CLIP, a fine-tuning strategy that redirects unsafe embeddings toward safe counterparts while preserving model utility. Unlike prior approaches that rely on noisy mappings, our method uses proximity-based redirection to guide unsafe inputs toward semantically aligned safe alternatives. This improves safety alignment across multiple tasks—enhancing redirection in retrieval, reducing unsafe generations in text-to-image synthesis, and lowering toxicity in image captioning—while retaining strong generalization, as demonstrated by zero-shot classification results. These findings highlight that proximity-aware redirection offers an effective balance between safety and performance. Future work may explore asymmetric encoder adaptation and
+            broader real-world deployment of safety-tuned models.
+          </p>
+       </div>
+      </div>
+    </div>
+    <!--/ Conclusion. -->
+
   </div>
 </section>
 
@@ -181,13 +296,14 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@misc{yousaf2025saferclipmitigatingnsfwcontent,
-  title={SafeR-CLIP: Mitigating NSFW Content in Vision-Language Models While Preserving Pre-Trained Knowledge},
-  author={Adeel Yousaf and Joseph Fioresi and James Beetham and Amrit Singh Bedi and Mubarak Shah},
-  year={2025},
-  eprint={2511.16743},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV},
-  url={https://arxiv.org/abs/2511.16743}
+      title={SafeR-CLIP: Mitigating NSFW Content in Vision-Language Models While Preserving Pre-Trained Knowledge}, 
+      author={Adeel Yousaf and Joseph Fioresi and James Beetham and Amrit Singh Bedi and Mubarak Shah},
+      year={2025},
+      eprint={2511.16743},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2511.16743}, 
+<!-- } -->
 }</code></pre>
   </div>
 </section>
@@ -196,9 +312,31 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link" href="https://github.com/keunhong">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
